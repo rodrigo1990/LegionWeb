@@ -21,9 +21,23 @@
   js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<header>
+	<div class="row">
+		<div class="container">
+			<div class="glitch-cont">
+				<div class="glitch"></div>
+			</div>
+		</div>
+	</div>
+</header>
 
-	<video id="video" src="8.mov" autoplay muted loop style="opacity:1"></video>
-	<div class="fog__container" style="z-index: -1;opacity:0.2">
+
+	<div class="star">
+		<div  id='stars'></div>
+		<div  id='stars2'></div>
+		<div  id='stars3'></div>
+	</div>
+	<div class="fog__container" style="z-index: -1;opacity:0.5">
 	    <div class="fog__img fog__img--first"></div>
 	    <div class="fog__img fog__img--second"></div>
 	    
@@ -52,36 +66,18 @@
 		</div>
 	</div>
 
-<!--<nav class="content" style="position:fixed;left:0;right:0;">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo">
-							<h1>LEGION <br> CREATIVA</h1>
-						</div>
-					</div>
-					<div class="col-sm-8">
-						<ul class="navbar">
-							<li><a><h2>SECCION 1</h2></a></li>
-							<li><a href="#seccion-2"><h2>SECCION 2</h2></a></li>
-							<li><a><h2>SECCION 3</h2></a></li>
-							<li><a><h2>SECCION 4</h2></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>-->
 
 	<section id="seccion-1">
 		<div class="row">
 			<div class="container">
 				<div class="col-lg-6">
 					<h1>CREAMOS <br> UNIVERSOS</h1>
+					<p>Somos una agencia creativa</p>
+					<p>El universo es totalidad: espacio, tiempo, materia, energía e impulso.</p>
+					<p>El universo no tiene limites. Esta en constante movimiento, nosotros también.</p>
 				</div>
 				<div class="col-lg-6">
-					<div class="glitch-cont">
-						<div class="glitch"></div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -118,7 +114,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
 <script>
-		$(".side-bar-btn").click(function(){
+		$(".side-bar-btn").mouseover(function(){
 
 
 			$(".side-bar-btn").addClass('animated fadeOutLeft');
@@ -129,6 +125,17 @@
 
 
 		});
+
+		$(".side-bar").mouseleave(function(){
+			$(".side-bar").removeClass('animated fadeInLeft');
+			$(".side-bar").addClass("animated fadeOutLeft");
+
+
+			$(".side-bar-btn").removeClass('animated fadeOutLeft');
+			$(".side-bar-btn").addClass('animated fadeInLeft');
+
+		});
+
 
 		$(".close").click(function(){
 			$(".side-bar").removeClass('animated fadeInLeft');
@@ -183,6 +190,39 @@ $(document).ready(function(){
 		target: '#mainNavBar',
 		offset: $(window).height() / 2
 	});
+
+
+	var lFollowX = 0,
+    lFollowY = 0,
+    x = 0,
+    y = 0,
+    friction = 1 / 10;
+
+function moveBackground() {
+  x += (lFollowX - x) * friction;
+  y += (lFollowY - y) * friction;
+  
+  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+  $('.star').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+  });
+
+  window.requestAnimationFrame(moveBackground);
+}
+
+$(window).on('mousemove click', function(e) {
+
+  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+  lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY = (10 * lMouseY) / 100;
+
+});
+
+moveBackground();
 
 });
 </script>
