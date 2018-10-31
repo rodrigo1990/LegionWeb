@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Web Legion</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="queries.css">
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="animate.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+	<video id="video" src="8.mov" autoplay muted loop style="opacity:1"></video>
+	<div class="fog__container" style="z-index: -1;opacity:0.2">
+	    <div class="fog__img fog__img--first"></div>
+	    <div class="fog__img fog__img--second"></div>
+	    
+	</div>
+	<div class="side-bar-btn">
+		<h2 id="open-arrow">></h2>
+	</div>
+	<div class="side-bar" id="nav">
+		<nav id="mainNavBar">
+		<ul class="nav">
+			<li><div id="bk-1" class="background"></div><div class="circle-nav"></div> <a href="#seccion-1" class="boton"> SECCION 1 </a></li>
+			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-2" class="boton"> SECCION 2</a></li>
+			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-3" class="boton"> SECCION 3</a></li>
+			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-4" class="boton"> SECCION 4</a></li>
+			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-5" class="boton">  SECCION 5</a></li>
+			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-6" class="boton"> SECCION 6</a></li>
+			<br><br>
+			<div class="fb-like" data-href="https://www.facebook.com/LegionCreativa/" data-width="1" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+			<br><br>
+			<a href="https://twitter.com/legioncreativa?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @legioncreativa</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		</ul>
+		</nav>
+		<div class="close">
+			<h3 id="close-arrow"><</h3>
+		</div>
+	</div>
+
+<!--<nav class="content" style="position:fixed;left:0;right:0;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo">
+							<h1>LEGION <br> CREATIVA</h1>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<ul class="navbar">
+							<li><a><h2>SECCION 1</h2></a></li>
+							<li><a href="#seccion-2"><h2>SECCION 2</h2></a></li>
+							<li><a><h2>SECCION 3</h2></a></li>
+							<li><a><h2>SECCION 4</h2></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>-->
+
+	<section id="seccion-1">
+		<div class="row">
+			<div class="container">
+				<div class="col-lg-6">
+					<h1>CREAMOS <br> UNIVERSOS</h1>
+				</div>
+				<div class="col-lg-6">
+					<div class="glitch-cont">
+						<div class="glitch"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fila">
+			<a id="ir-seccion-2" href="#seccion-2">
+			<div  class="circle center-block">
+				<img src="down-arrow-2.png" clasS="center-block" width="">
+			</div>
+			</a>
+		</div>
+
+	</section>
+
+	<section id="seccion-2" class="fog" style="background-image:url('1-bk.jpg')">
+  <div class="fog__container" style="display:none">
+    <div class="fog__img fog__img--first"></div>
+    <div class="fog__img fog__img--second"></div>
+    <div class="text-cont center-block" style="margin-top: 10%;">
+  	<div class="container">
+  		<div class="col-sm-6">
+  			<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. , quis nostrud exercitation </h1>
+  		</div>
+  		<div class="col-sm-6 logo-cont">
+  			<h1>LEGION <br> CREATIVA</h1>
+  		</div>
+  	</div>
+  </div>
+  </div>
+  
+</section>
+
+	
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+<script>
+		$(".side-bar-btn").click(function(){
+
+
+			$(".side-bar-btn").addClass('animated fadeOutLeft');
+			//$(".side-bar").show();
+			$(".side-bar").removeClass('animated fadeOutLeft');
+			$(".side-bar").addClass('animated fadeInLeft');
+			$(".side-bar").show();
+
+
+		});
+
+		$(".close").click(function(){
+			$(".side-bar").removeClass('animated fadeInLeft');
+			$(".side-bar").addClass("animated fadeOutLeft");
+
+
+			$(".side-bar-btn").removeClass('animated fadeOutLeft');
+			$(".side-bar-btn").addClass('animated fadeInLeft');
+
+		});
+
+
+
+
+///////////////////////////
+	// Smooth scroll
+	$(".side-bar ul li a[href^='#']").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+
+	});
+
+
+	$("#ir-seccion-2").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+	});
+
+	
+
+	$('#back-to-top').on('click', function(){
+		$('body,html').animate({
+			scrollTop: 0
+		}, 600);
+	});
+
+
+
+
+</script>
+<script>
+$(document).ready(function(){
+    ///////////////////////////
+	// Scrollspy
+	$('body').scrollspy({
+		target: '#mainNavBar',
+		offset: $(window).height() / 2
+	});
+
+});
+</script>
+</body>
+</html>
+

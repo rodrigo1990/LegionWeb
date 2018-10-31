@@ -1,0 +1,56 @@
+@media only screen and (min-width: 10px) and (max-width: 850px) {
+.side-bar-btn, .side-bar{
+	display:none;
+}
+
+h1{
+	text-align: center;
+	font-size: 5rem !important;
+}
+
+#seccion-1 .row{
+    padding-top: initial !important;
+
+}
+
+}
+
+
+@media only screen and (min-width: 10px) and (max-width: 414px) {
+
+
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation:portrait) {
+
+
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 850px) and (orientation:landscape) {
+
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+
+	
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1920px) {
+
+	
+}
+
+
+
