@@ -703,6 +703,7 @@ section#seccion-1 h1 {
   background-size: contain;
   background-position: center;
   animation: marquee 120s  linear infinite;
+  filter:invert(64%);
 }
 
 
