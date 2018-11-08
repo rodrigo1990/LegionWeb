@@ -3,14 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" />
-
 	<title>Web Legion</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="estilos/animate.css">
 	<link rel="stylesheet" href="estilos/queries.css">
 	<link rel="stylesheet" href="estilos/estilos.css">
-	<link rel="stylesheet" href="estilos/animate.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+  	<script>
+		function includeHTML() {
+		  var z, i, elmnt, file, xhttp;
+		  /*loop through a collection of all HTML elements:*/
+		  z = document.getElementsByTagName("*");
+		  for (i = 0; i < z.length; i++) {
+		    elmnt = z[i];
+		    /*search for elements with a certain atrribute:*/
+		    file = elmnt.getAttribute("w3-include-html");
+		    if (file) {
+		      /*make an HTTP request using the attribute value as the file name:*/
+		      xhttp = new XMLHttpRequest();
+		      xhttp.onreadystatechange = function() {
+		        if (this.readyState == 4) {
+		          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+		          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+		          /*remove the attribute, and call this function once more:*/
+		          elmnt.removeAttribute("w3-include-html");
+		          includeHTML();
+		        }
+		      }      
+		      xhttp.open("GET", file, true);
+		      xhttp.send();
+		      /*exit the function:*/
+		      return;
+		    }
+		  }
+		};
+</script>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -31,12 +62,13 @@
 	</div>
 </header>
 
-
+<div class="star-cont">
 	<div class="star">
 		<div  id='stars'></div>
 		<div  id='stars2'></div>
 		<div  id='stars3'></div>
 	</div>
+</div>
 	<div class="fog__container" style="z-index: -1;opacity:0.5;">
 	    <div class=" fog__img fog__img--first"></div>
 	    <div class=" fog__img fog__img--second"></div>
@@ -48,12 +80,13 @@
 	<div class="side-bar" id="nav">
 		<nav id="mainNavBar">
 		<ul class="nav">
-			<li><div id="bk-1" class="background"></div><div class="circle-nav"></div> <a href="#seccion-1" class="boton"> SECCION 1 </a></li>
-			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-2" class="boton"> SECCION 2</a></li>
-			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-3" class="boton"> SECCION 3</a></li>
-			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-4" class="boton"> SECCION 4</a></li>
-			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-5" class="boton">  SECCION 5</a></li>
-			<li><div class="background"></div><div class="circle-nav"></div><a href="#seccion-6" class="boton"> SECCION 6</a></li>
+			<li><div id="bk-1" class="background"></div> <a href="#home" class="boton"> HOME </a></li>
+			<li><div class="background"></div><a href="#conexiones" class="boton"> CONEXIONES</a></li>
+			<li><div class="background"></div><a href="#impulso" class="boton"> IMPULSOS</a></li>
+			<li><div class="background"></div><a href="#disenio" class="boton"> DISEÑOS</a></li>
+			<li><div class="background"></div><a href="#universos" class="boton">UNIVERSOS</a></li>
+			<li><div class="background"></div><a href="#cosmos" class="boton"> COSMOS</a></li>
+			<li><div class="background"></div><a href="#contacto" class="boton"> CONTACTO</a></li>
 			<br><br>
 			<div class="fb-like" data-href="https://www.facebook.com/LegionCreativa/" data-width="1" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
 			<br><br>
@@ -67,20 +100,22 @@
 	</div>
 
 
-	<section id="seccion-1">
+	<section id="home">
 		<div class="row">
 			<div class="container">
 				<div class="col-lg-12">
 					<h1>Creamos <br> Universos</h1>
-					<p>Somos una agencia creativa</p>
-					<p>El universo es totalidad: espacio, tiempo, materia, energía e impulso.</p>
-					<p>El universo no tiene limites. Esta en constante movimiento, nosotros también.</p>
+					<div>
+						<p>Somos una <span> agencia creativa</span></p>
+						<p>El universo es totalidad: espacio, tiempo, materia, energía e impulso.</p>
+						<p>El universo no tiene límites. Está en constante movimiento, <span>nosotros también.</span></p>
+					</div>
 				</div>
 				
 			</div>
 		</div>
 		<div class="fila">
-			<a id="ir-seccion-2" href="#seccion-2">
+			<a id="ir-conexiones" href="#conexiones">
 			<div  class="circle center-block">
 				<img src="img/down-arrow-2.png" clasS="center-block" width="">
 			</div>
@@ -89,10 +124,8 @@
 
 	</section>
 
-	<section id="seccion-2">
-		<!--  <video  loop muted id="video" autoplay >
-			<source src="video/cloud.mp4" type="video/mp4">
-		</video>  -->
+	<section id="conexiones">
+		
 
 	    <div class="row">
 	    	<div class="container">
@@ -102,7 +135,7 @@
 	    	</div>
 	    </div>
 	    <div class="fila">
-			<a id="ir-seccion-3" href="#seccion-3">
+			<a id="ir-impulso" href="#impulso">
 			<div  class="circle center-block">
 				<img src="img/down-arrow-2.png" clasS="center-block" width="">
 			</div>
@@ -114,7 +147,7 @@
 
 
 
-	<section id="seccion-3">
+	<section id="impulso">
 		<!--  <video  loop muted id="video" autoplay >
 			<source src="video/cloud.mp4" type="video/mp4">
 		</video>  -->
@@ -144,7 +177,7 @@
 
 
 	    <div class="fila">
-			<a id="ir-seccion-4" href="#seccion-4">
+			<a id="ir-disenio" href="#disenio">
 			<div  class="circle center-block">
 				<img src="img/down-arrow-2.png" clasS="center-block" width="">
 			</div>
@@ -154,7 +187,7 @@
   
 </section>
 
-<section id="seccion-4">
+<section id="disenio">
 	    <div class="fog fog__img nube" style="z-index: -1"></div>	    
 
 	    <div class="row">
@@ -175,7 +208,7 @@
 
 
 	    <div class="fila">
-			<a id="ir-seccion-5" href="#seccion-5">
+			<a id="ir-universos" href="#universos">
 			<div  class="circle center-block">
 				<img src="img/down-arrow-2.png" clasS="center-block" width="">
 			</div>
@@ -186,83 +219,80 @@
 </section>
 
 
-<section id="seccion-5">
+<section id="universos">
+
+		<div w3-include-html="inc/trabajos-cont.html"></div> 
+
+		<script>
+		includeHTML();
+		</script>
+
 	    <div class="row">
 			<div class="text-center">
 				<h3>Algunos universos.</h3>
 			</div>
 	    	<div class="container">
-
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-
-
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-		    	<div class="frame">
-			
-		    	</div>
-
-
+		    	<a onClick="abrirTrabajo(1)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>    	
+		    	<a onClick="abrirTrabajo(2)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(3)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(4)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(5)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(6)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(7)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(8)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
+		    	<a onClick="abrirTrabajo(9)">
+		    		<img class="frame" src="trabajos/trabajo-1.jpg">
+		    	</a>
 	    	</div>
 
-	    </div>
 
 
-
-	    <div class="fila">
-			<a id="ir-seccion-6" href="#seccion-6">
-			<div  class="circle center-block">
-				<img src="img/down-arrow-2.png" clasS="center-block" width="">
+		    <div class="fila">
+				<a id="ir-cosmos" href="#cosmos">
+				<div  class="circle center-block">
+					<img src="img/down-arrow-2.png" clasS="center-block" width="">
+				</div>
+				</a>
 			</div>
-			</a>
 		</div>
 
   
 </section>
 
-<section id="seccion-6">
+<section id="cosmos">
 	    <div class="row">
 			<div class="text-center">
 				<h3>Nuestros cosmos.</h3>
 			</div>
-			<div class="circle-cont container">
-				<div class="row">
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-		    	</div>
-		    	<div class="row">
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-		    	</div>
-		    	<div class="row">
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-			    	<div class="circle-rrhh"></div>
-		    	</div>
+			<div class="circle-cont center-block container">
+
+				<ul class="flex">
+					<li class="circle-rrhh bubble blue" id="beli"><p>BELI</p></li>
+					<li class="circle-rrhh bubble blue" id="andre"><p>ANDRE</p></li>
+					<li class="circle-rrhh bubble blue" id="rodri"><p>RODRI</p></li>
+					<li class="circle-rrhh bubble fucsia" id="sofi"><p>SOFI</p></li>
+					<li class="circle-rrhh bubble fucsia" id="delfi"><p>DELFI</p></li>
+					<li class="circle-rrhh bubble blue" id="belu"><p>BELU</p></li>
+					<li class="circle-rrhh bubble fucsia" id="cachi"><p>CACHI</p></li>
+					<li class="circle-rrhh bubble blue" id="cintia"><p>CINTIA</p></li>
+					<li class="circle-rrhh bubble fucsia" id="dani"><p>DANI</p></li>
+				</ul>
 	    	</div>
 
 	    </div>
@@ -270,7 +300,7 @@
 
 
 	    <div class="fila">
-			<a id="ir-seccion-6" href="#seccion-6">
+			<a id="irContacto" href="#contacto">
 			<div  class="circle center-block">
 				<img src="img/down-arrow-2.png" clasS="center-block" width="">
 			</div>
@@ -279,6 +309,28 @@
 
   
 </section>
+
+
+<section id="contacto">
+	<video  loop muted id="video" autoplay >
+			<source src="video/cloud.mp4" type="video/mp4">
+		</video> 
+	    <div class="row text-center">
+	    	<h2>Hablemos.</h2>
+	    	<a href="mailTo:info@legioncreativa.com?subject=Legion%20Creativa%20Web">
+	    		<h3>info@legioncreativa.com</h3>
+	    	</a>
+
+	    	<h3>+54 11 5 888 999</h3>
+	    	<h3>Catamarca 1150 - Martinez</h3>
+	    	<img src="img/iso.png" alt="">
+
+			
+			
+	    </div>
+
+</section>
+
 	
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -332,7 +384,7 @@
 	});
 
 
-	$("#ir-seccion-2").on('click', function(e) {
+	$("#ir-conexiones").on('click', function(e) {
 		e.preventDefault();
 		var hash = this.hash;
 		$('html, body').animate({
@@ -340,7 +392,7 @@
 		}, 600);
 	});
 
-	$("#ir-seccion-3").on('click', function(e) {
+	$("#ir-impulso").on('click', function(e) {
 		e.preventDefault();
 		var hash = this.hash;
 		$('html, body').animate({
@@ -348,13 +400,40 @@
 		}, 600);
 	});
 
-	$("#ir-seccion-4").on('click', function(e) {
+	$("#ir-disenio").on('click', function(e) {
 		e.preventDefault();
 		var hash = this.hash;
 		$('html, body').animate({
 			scrollTop: $(this.hash).offset().top
 		}, 600);
 	});
+
+	$("#ir-universos").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+	});
+
+
+	$("#ir-cosmos").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+	});
+
+
+	$("#irContacto").on('click', function(e) {
+		e.preventDefault();
+		var hash = this.hash;
+		$('html, body').animate({
+			scrollTop: $(this.hash).offset().top
+		}, 600);
+	});
+
 
 
 
@@ -419,7 +498,24 @@ moveBackground();
 
 
 });
+
+
+
+function abrirTrabajo(nroId){
+	$("#trabajo-"+nroId+"").removeClass('animated slideOutRight');
+	$("#trabajo-"+nroId+"").addClass('animated slideInRight');
+	$("#trabajo-"+nroId+"").show();
+}
+
+function cerrarTrabajo(nroId){
+	$("#trabajo-"+nroId+"").removeClass('animated slideInRight');
+	$("#trabajo-"+nroId+"").addClass('animated slideOutRight');
+
+
+
+}
 </script>
+
 </body>
 </html>
 
