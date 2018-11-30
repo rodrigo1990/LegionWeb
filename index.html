@@ -6,8 +6,11 @@
 	<title>Web Legion</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="estilos/animate.css">
-	<link rel="stylesheet" href="estilos/queries.css">
 	<link rel="stylesheet" href="estilos/estilos.css">
+	<link rel="stylesheet" href="estilos/queries.css">
+	<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -98,8 +101,27 @@
 		</div>
 	</div>
 
+	<section id="only-xs">
+		<div class="owl-one owl-carousel owl-theme">
+			<div>
+				<div class="row">
+					<div class="container">
+						<div class="col-lg-12">
+							<h1>Creamos <br> Universos</h1>
+							<div>
+								<p>Somos una <span> agencia creativa</span></p>
+								<p>El universo es totalidad: espacio, tiempo, materia, energía e impulso.</p>
+								<p>El universo no tiene límites. Está en constante movimiento, <span>nosotros también.</span></p>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>	
+	</section>
 
-	<section id="home">
+
+	<section id="home" class="no-xs">
 		<div class="row">
 			<div class="container">
 				<div class="col-lg-12">
@@ -123,7 +145,7 @@
 
 	</section>
 
-	<section id="conexiones">
+	<section id="conexiones" class="no-xs">
 		
 
 	    <div class="row">
@@ -146,7 +168,7 @@
 
 
 
-	<section id="impulso">
+	<section id="impulso" class="no-xs">
 		<!--  <video  loop muted id="video" autoplay >
 			<source src="video/cloud.mp4" type="video/mp4">
 		</video>  -->
@@ -167,7 +189,7 @@
 		    		<div class="palabras">Materia.</div class="palabras"><div class="palabras">Sensaciones.</div class="palabras"><div class="palabras">Impulso.</div class="palabras"><div class="palabras">Materia.</div class="palabras"><div class="palabras">Tiempo.</div class="palabras">
 		    		<div class="palabras">Impulso.</div class="palabras"><div class="palabras">Materia.</div class="palabras"><div class="palabras">Tiempo.</div class="palabras"><div class="palabras">Evolucion.</div class="palabras"><div class="palabras">Impulso.</div class="palabras">
 		    		<div class="palabras">Materia.</div class="palabras"><div><div class="palabras">Tiempo.</div>
-
+						</div>
 		    	</div>
 	    	</div>
 
@@ -186,7 +208,7 @@
   
 </section>
 
-<section id="disenio">
+<section id="disenio" class="no-xs">
 	    <div class="fog fog__img nube" style="z-index: -1"></div>	    
 
 	    <div class="row">
@@ -218,7 +240,7 @@
 </section>
 
 
-<section id="universos">
+<section id="universos" class="no-xs">
 
 		<div w3-include-html="inc/trabajos-cont.html"></div> 
 
@@ -259,7 +281,7 @@
 		    		<img class="frame" src="trabajos/trabajo-1.jpg">
 		    	</a>
 	    	</div>
-
+		</div>
 
 
 		    <div class="fila">
@@ -269,12 +291,12 @@
 				</div>
 				</a>
 			</div>
-		</div>
+		
 
   
 </section>
 
-<section id="cosmos">
+<section id="cosmos" class="no-xs">
 	    <div class="row">
 			<div class="text-center">
 				<h3>Nuestros cosmos.</h3>
@@ -282,15 +304,42 @@
 			<div class="circle-cont center-block container">
 
 				<ul class="flex">
-					<li class="circle-rrhh bubble blue" id="beli"><p>BELI</p></li>
-					<li class="circle-rrhh bubble blue" id="andre"><p>ANDRE</p></li>
-					<li class="circle-rrhh bubble blue" id="rodri"><p>RODRI</p></li>
-					<li class="circle-rrhh bubble fucsia" id="sofi"><p>SOFI</p></li>
-					<li class="circle-rrhh bubble fucsia" id="delfi"><p>DELFI</p></li>
-					<li class="circle-rrhh bubble blue" id="belu"><p>BELU</p></li>
-					<li class="circle-rrhh bubble fucsia" id="cachi"><p>CACHI</p></li>
-					<li class="circle-rrhh bubble blue" id="cintia"><p>CINTIA</p></li>
-					<li class="circle-rrhh bubble fucsia" id="dani"><p>DANI</p></li>
+					<li class="circle-rrhh bubble blue" id="beli">
+						<p>BELI</p>
+						<span>//Director</span>	
+					</li>
+					<li class="circle-rrhh bubble blue" id="andre">
+						<p>ANDRE</p>
+						<span>//Cuentas</span>
+					</li>
+					<li class="circle-rrhh bubble blue" id="rodri">
+						<p>RODRI</p>
+						<span>//Desarrollo Web</span>
+					</li>
+					<li class="circle-rrhh bubble fucsia" id="sofi">
+						<p>SOFI</p>
+						<span>//Diseño Grafico</span>
+					</li>
+					<li class="circle-rrhh bubble fucsia" id="delfi">
+						<p>DELFI</p>
+						<span>//Diseño Grafico</span>
+					</li>
+					<li class="circle-rrhh bubble blue" id="belu">
+						<p>BELU</p>
+						<span>//Cuentas</span>
+					</li>
+					<li class="circle-rrhh bubble fucsia" id="cachi">
+						<p>CACHI</p>
+						<span>//Recursos Humanos</span>
+					</li>
+					<li class="circle-rrhh bubble blue" id="cintia">
+						<p>CINTIA</p>
+						<span>//Ventas</span>
+					</li>
+					<li class="circle-rrhh bubble fucsia" id="dani">
+						<p>DANI</p>
+						<span>//Cuentas</span>
+					</li>
 				</ul>
 	    	</div>
 
@@ -310,7 +359,7 @@
 </section>
 
 
-<section id="contacto">
+<section id="contacto" class="no-xs">
 	<video  loop muted id="video" autoplay >
 			<source src="video/cloud.mp4" type="video/mp4">
 		</video> 
@@ -334,6 +383,9 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+<script type="text/javascript" src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+
 <script>
 		$(".side-bar-btn").mouseover(function(){
 

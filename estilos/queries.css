@@ -1,4 +1,23 @@
 @media only screen and (min-width: 10px) and (max-width: 850px) {
+
+
+}
+
+
+@media only screen and (min-width: 10px) and (max-width: 767px) {
+	.only-xs{
+	display:block;
+}
+.no-xs{
+	display:none;
+}
+.side-bar-btn, .side-bar{
+	display:none;
+}
+body{
+	overflow-y: scroll !important;
+}
+
 .side-bar-btn, .side-bar{
 	display:none;
 }
@@ -13,7 +32,93 @@ h1{
 
 }
 
+.glitch{
+	 position: fixed;
+    width: 97px;
+    height: 177px;
+    background: url(../img/logo4-03-02.png);
+    background-repeat: no-repeat;
+    z-index: 5000;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
+
+section>.row {
+}
+
+#home{
+	text-align: center;
+}
+
+
+section{
+	display:block;
+}
+
+
+
+#impulso .palabras {
+    font-size: 1.5rem;
+}
+
+#impulso .palabras:hover {
+    font-size: 4rem;
+}
+
+#disenio .nube {
+    display:none;
+}
+
+#disenio h2 {
+    float: left;
+    font-size: 3rem;
+}
+
+
+#universos a {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 223px;
+    height: 170px;
+}
+
+
+.frame {
+    margin-left: 0;
+}
+
+
+
+.fila{
+	display:none;
+}
+
+#video{
+	display:none;
+}
+
+.fog__container{
+	display:none;
+}
+
+#cosmos .circle-cont {
+    width: 385px !important;
+    padding: 0;
+}
+
+#cosmos .circle-rrhh {
+    margin-left: 4px;
+}
+
+
+section { 
+height: 100%; }
+
+
+}
+
 
 
 @media only screen and (min-width: 10px) and (max-width: 414px) {
@@ -27,16 +132,46 @@ h1{
 
 
 
+h1{
+	text-align: center;
+	font-size: 5rem !important;
+}
+
+#seccion-1 .row{
+    padding-top: initial !important;
+
+}
 
 }
 
 @media only screen and (min-width: 320px) and (max-width: 850px) and (orientation:landscape) {
 
-    
+  
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+ .nube{
+ 	display:none;
+ }
+
+section>.row{
+	text-align: center;
+}
+
+#disenio h2 {
+    float: initial;
+}
+
+.frame{
+	width: 190px;
+}
+
+#cosmos .circle-rrhh {
+
+    margin-left: 64px;
+    
+}
 
 
 }
@@ -51,6 +186,7 @@ h1{
 
 	
 }
+
 
 
 
