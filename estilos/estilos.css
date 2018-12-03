@@ -28,7 +28,7 @@ html {
 	/*display: none;*/
 }
 
-.only-xs{
+#only-xs{
 	display:none;
 }
 /* width */
@@ -779,6 +779,17 @@ section>.row{
     margin-top: 45px;
     cursor:pointer;
 
+}
+
+#only-xs .circle-rrhh{
+	    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-left: 50px;
+    list-style: none;
+    margin-top: 45px;
+    cursor:pointer;	
 }
 
 #cosmos .flex li p,#cosmos .flex li span{

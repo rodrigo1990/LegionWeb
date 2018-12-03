@@ -5,8 +5,34 @@
 
 
 @media only screen and (min-width: 10px) and (max-width: 767px) {
-	.only-xs{
-	display:block;
+	#only-xs .circle-rrhh{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-left: 12px;
+    list-style: none;
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+
+    #only-xs{
+	display:block !important;
+    text-align: center;
+}
+
+#only-xs p{
+
+        font-size: 1.7rem;
+
+}
+
+
+#only-xs .frame{
+    margin-left: 15px;
+    width: 120px;
+    height: 99px;
 }
 .no-xs{
 	display:none;
