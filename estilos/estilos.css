@@ -780,44 +780,81 @@ section>.row{
     position:absolute;
 
 }
+
+.cont-circle{
+	position: absolute;
+    width: 852px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
 #beli{
 	left:0px;
+	top:100px;
+	animation:movimiento 10s 0.1s infinite ;
 }
 
 
 #andre{
-	left:100px;
+	left:200px;
+	top:50px;
 }
 
 #sofi{
-	left:200px;
+	left:400px;
+	top:50px;
 }
 
 #delfi{
-	left:300px;
+	left:600px;
+	top:100px;
 }
 
 #belu{
-	left:400px;
+	left: 173px;
+	top:300px;
 }
 
 #cachi{
-	left:500px;
+
+	left: 400px;
+	top: 300px;
 }
 
 #cintia{
-	left:600px;
+	left: 000px;
+    top: 447PX;
 }
 
 #dani{
-	left:700px;
+	    left: 275px;
+    top: 505PX;
+}
+
+#rodri{
+    left: 593px;
+    top: 466PX;
 }
 
 
 
+@keyframes movimiento{
+	0%{
+		left:0;
+		top:0px;
+	}
+	50%{
+		left: 20px;
+		top:-20px;
+	}
 
-
-
+	100%{
+		left: 0px;
+		top:0px;
+	}
+}
 
 
 
