@@ -769,7 +769,6 @@ section>.row{
 
 
 #cosmos .circle-rrhh{
-	    /*border: 2px solid white;*/
     border-radius: 50%;
     height: 150px;
     width: 150px;
@@ -778,8 +777,57 @@ section>.row{
     list-style: none;
     margin-top: 45px;
     cursor:pointer;
+    position:absolute;
 
 }
+#beli{
+	left:0px;
+}
+
+
+#andre{
+	left:100px;
+}
+
+#sofi{
+	left:200px;
+}
+
+#delfi{
+	left:300px;
+}
+
+#belu{
+	left:400px;
+}
+
+#cachi{
+	left:500px;
+}
+
+#cintia{
+	left:600px;
+}
+
+#dani{
+	left:700px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #only-xs .circle-rrhh{
 	    border-radius: 50%;
