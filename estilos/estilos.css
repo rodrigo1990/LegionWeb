@@ -783,17 +783,23 @@ section>.row{
 
 .cont-circle{
 	position: absolute;
-    width: 852px;
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
     margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 849px;
+    height: 770px;
 }
 #beli{
 	left:0px;
 	top:100px;
-	animation:movimiento 10s 0.1s infinite ;
+	/*animation:movimiento 10s 0.1s infinite ;*/
+}
+
+#beli:hover #beli-span{
+	opacity: 1;
+	transition:opacity 0.5s;
 }
 
 
@@ -802,9 +808,20 @@ section>.row{
 	top:50px;
 }
 
+
+#andre:hover #andre-span{
+	opacity: 1;
+	transition:opacity 0.5s;
+}
+
 #sofi{
 	left:400px;
 	top:50px;
+}
+
+#sofi:hover #sofi-span{
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 #delfi{
@@ -812,15 +829,30 @@ section>.row{
 	top:100px;
 }
 
+#delfi:hover #delfi-span{
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
 #belu{
 	left: 173px;
-	top:300px;
+	top:276px;
+}
+
+#belu:hover #belu-span{
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 #cachi{
 
 	left: 400px;
-	top: 300px;
+	top: 276px;
+}
+
+#cachi:hover #cachi-span{
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 #cintia{
@@ -828,14 +860,31 @@ section>.row{
     top: 447PX;
 }
 
+#cintia:hover #cintia-span{
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
 #dani{
 	    left: 275px;
     top: 505PX;
 }
 
+#dani:hover #dani-span{
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
 #rodri{
     left: 593px;
     top: 466PX;
+}
+
+
+#rodri:hover #rodri-span
+{
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 
@@ -877,19 +926,22 @@ section>.row{
     cursor:pointer;	
 }
 
-#cosmos .flex li p,#cosmos .flex li span{
+#cosmos .bubble  p,#cosmos .bubble  span{
 	font-family: worksans-bold;
 	color:white;
 }
 
 
-#cosmos .flex li p{
-	margin-top: 49px;
+#cosmos .bubble  p{
+    margin-top: 57px;
     text-align: center;	
 }
 
-#cosmos .flex li span{
+#cosmos .bubble  span{
 	text-align: left;
+    margin-left: -58px;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .bubble {
