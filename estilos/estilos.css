@@ -28,9 +28,7 @@ html {
 	/*display: none;*/
 }
 
-#only-xs{
-	display:none;
-}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -716,6 +714,13 @@ section>.row{
 }
 
 
+
+header img{
+	margin-top:15px;
+	margin-left: 15px;
+}
+
+
 .trabajo-cont .header h2 {
     border-bottom: 4px solid grey;
 }
@@ -915,16 +920,6 @@ section>.row{
 
 
 
-#only-xs .circle-rrhh{
-	    border-radius: 50%;
-    height: 150px;
-    width: 150px;
-    float: left;
-    margin-left: 50px;
-    list-style: none;
-    margin-top: 45px;
-    cursor:pointer;	
-}
 
 #cosmos .bubble  p,#cosmos .bubble  span{
 	font-family: worksans-bold;
